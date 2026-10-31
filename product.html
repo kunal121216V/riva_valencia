@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Valencia Leather Bag | Riva Valencia</title>
+  <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    HANDCRAFTED WITH PURPOSE
+    <span>✦</span>
+    COMPLIMENTARY SHIPPING ON ORDERS OVER €250
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html" class="brand">
+      <span class="brand-name">RIVA VALENCIA</span>
+      <span class="brand-subtitle">DISEÑADO EN ESPAÑA</span>
+    </a>
+
+    <nav class="header-actions">
+
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24">
+          <circle cx="10.8" cy="10.8" r="6.8"/>
+          <path d="m16 16 5 5"/>
+        </svg>
+      </button>
+
+      <a href="login.html" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="7.5" r="3.5"/>
+          <path d="M4.5 21c.5-4.3 3.1-6.5 7.5-6.5s7 2.2 7.5 6.5"/>
+        </svg>
+      </a>
+
+      <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.8 8.7c0 5.1-8.8 11-8.8-11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+        </svg>
+      </a>
+
+      <a href="cart.html" class="icon-btn product-cart-icon" aria-label="Shopping bag">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 8h14l1 13H4L5 8Z"/>
+          <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+        </svg>
+        <span id="headerCartCount">0</span>
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- BREADCRUMB -->
+
+  <div class="product-breadcrumb">
+    <a href="index.html">HOME</a>
+    <span>/</span>
+    <a href="collection.html">ACCESSORIES</a>
+    <span>/</span>
+    <span>VALENCIA LEATHER BAG</span>
+  </div>
+
+
+  <!-- PRODUCT SECTION -->
+
+  <main class="product-main">
+
+    <!-- IMAGE GALLERY -->
+
+    <section class="product-gallery">
+
+      <div class="product-thumbnails">
+
+        <button class="thumbnail active" data-image="0">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Bag front view">
+        </button>
+
+        <button class="thumbnail" data-image="1">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Bag detail">
+        </button>
+
+        <button class="thumbnail" data-image="2">
+          <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500" alt="Bag lifestyle">
+        </button>
+
+        <button class="thumbnail" data-image="3">
+          <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500" alt="Bag collection">
+        </button>
+
+      </div>
+
+      <div class="product-main-image">
+
+        <img
+          id="mainProductImage"
+          src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1000"
+          alt="Valencia Leather Handbag"
+        >
+
+        <span class="product-image-label">RIVA VALENCIA ATELIER</span>
+
+        <button class="image-zoom" id="zoomButton" aria-label="View image larger">
+          ⤢
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCT INFORMATION -->
+
+    <section class="product-information">
+
+      <span class="product-category">RIVA VALENCIA COLLECTION</span>
+
+      <div class="product-rating">
+        <span>★★★★★</span>
+        <small>NEW SEASON ARRIVAL</small>
+      </div>
+
+      <h1>VALENCIA LEATHER HANDBAG</h1>
+
+      <div class="product-price">
+        €189.00 EUR
+      </div>
+
+      <p class="product-description">
+        A refined expression of everyday elegance.
+        The Valencia Leather Handbag combines timeless
+        design with thoughtful details and a versatile
+        silhouette made for modern living.
+      </p>
+
+
+      <!-- COLOR -->
+
+      <div class="product-option">
+
+        <div class="option-heading">
+          <span>COLOR</span>
+          <strong id="selectedColor">Classic Brown</strong>
+        </div>
+
+        <div class="color-options">
+
+          <button
+            class="color-swatch active"
+            data-color="Classic Brown"
+            style="--swatch:#79513c"
+            aria-label="Classic Brown"
+          ></button>
+
+          <button
+            class="color-swatch"
+            data-color="Midnight Black"
+            style="--swatch:#201d1b"
+            aria-label="Midnight Black"
+          ></button>
+
+          <button
+            class="color-swatch"
+            data-color="Soft Beige"
+            style="--swatch:#c9b69c"
+            aria-label="Soft Beige"
+          ></button>
+
+        </div>
+
+      </div>
+
+
+      <!-- SIZE -->
+
+      <div class="product-option">
+
+        <div class="option-heading">
+          <span>SIZE</span>
+          <a href="#product-details">SIZE GUIDE</a>
+        </div>
+
+        <div class="size-options">
+
+          <button class="size-button active" data-size="Standard">
+            STANDARD
+          </button>
+
+          <button class="size-button" data-size="Large">
+            LARGE
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUANTITY -->
+
+      <div class="product-option">
+
+        <div class="option-heading">
+          <span>QUANTITY</span>
+        </div>
+
+        <div class="product-purchase-row">
+
+          <div class="product-quantity">
+
+            <button id="decreaseQuantity" aria-label="Decrease quantity">
+              −
+            </button>
+
+            <span id="productQuantity">1</span>
+
+            <button id="increaseQuantity" aria-label="Increase quantity">
+              +
+            </button>
+
+          </div>
+
+          <button class="add-to-bag" id="addToBag">
+            ADD TO BAG — €189.00
+          </button>
+
+          <button class="product-wishlist" id="wishlistButton" aria-label="Add to wishlist">
+            ♡
+          </button>
+
+        </div>
+
+        <p class="stock-message">
+          <span></span> IN STOCK — READY TO SHIP
+        </p>
+
+      </div>
+
+
+      <!-- DELIVERY -->
+
+      <div class="product-delivery">
+
+        <div>
+          <span>✧</span>
+          <div>
+            <strong>COMPLIMENTARY SHIPPING</strong>
+            <p>On all orders above €250.</p>
+          </div>
+        </div>
+
+        <div>
+          <span>↺</span>
+          <div>
+            <strong>EASY RETURNS</strong>
+            <p>Simple returns within our return window.</p>
+          </div>
+        </div>
+
+        <div>
+          <span>♧</span>
+          <div>
+            <strong>CRAFTED WITH PURPOSE</strong>
+            <p>Thoughtful design, made to last.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- PRODUCT DETAILS -->
+
+  <section class="product-details-section" id="product-details">
+
+    <div class="details-heading">
+      <span class="eyebrow">THE DETAILS</span>
+      <h2>MADE FOR EVERYDAY MOMENTS.</h2>
+    </div>
+
+    <div class="details-grid">
+
+      <div class="detail-description">
+        <h3>DESIGN & CRAFTSMANSHIP</h3>
+        <p>
+          Designed with a balance of simplicity and
+          character, the Valencia handbag is a versatile
+          companion for everyday outings and special
+          occasions.
+        </p>
+      </div>
+
+      <div class="detail-list">
+        <div>
+          <span>PRODUCT</span>
+          <strong>Valencia Leather Handbag</strong>
+        </div>
+
+        <div>
+          <span>COLOUR</span>
+          <strong id="detailColor">Classic Brown</strong>
+        </div>
+
+        <div>
+          <span>SIZE</span>
+          <strong id="detailSize">Standard</strong>
+        </div>
+
+        <div>
+          <span>STYLE</span>
+          <strong>Everyday Collection</strong>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RELATED PRODUCTS -->
+
+  <section class="related-products">
+
+    <div class="related-heading">
+      <span class="eyebrow">DISCOVER MORE</span>
+      <h2>YOU MAY ALSO LOVE</h2>
+    </div>
+
+    <div class="related-grid">
+
+      <a href="product.html" class="related-card">
+        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600" alt="Leather shoulder bag">
+        <h3>THE EVERYDAY SHOULDER BAG</h3>
+        <p>€159.00</p>
+      </a>
+
+      <a href="product.html" class="related-card">
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600" alt="Classic handbag">
+        <h3>THE CLASSIC EDITION</h3>
+        <p>€219.00</p>
+      </a>
+
+      <a href="product.html" class="related-card">
+        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600" alt="Designer bag">
+        <h3>THE SIGNATURE BAG</h3>
+        <p>€179.00</p>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMAGE LIGHTBOX -->
+
+  <div class="product-lightbox" id="productLightbox">
+    <button id="closeLightbox" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="" alt="Product enlarged view">
+  </div>
+
+
+  <!-- NOTIFICATION -->
+
+  <div class="product-toast" id="productToast">
+    PRODUCT ADDED TO YOUR BAG
+  </div>
+
+
+  <!-- SCRIPTS -->
+
+  <script src="cart.js"></script>
+  <script src="product.js"></script>
+
+</body>
+</html>

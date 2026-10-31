@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collection | Riva Valencia</title>
+    <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+    <link rel="stylesheet" href="collection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT -->
+    <div class="announcement">
+        HANDCRAFTED WITH PURPOSE
+        <span>✦</span>
+        COMPLIMENTARY SHIPPING ON ORDERS OVER €250
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <a href="index.html" class="logo">
+            RIVA VALENCIA
+            <small>DISEÑADO EN ESPAÑA</small>
+        </a>
+
+        <div class="header-actions">
+            <button id="searchToggle" aria-label="Search">⌕</button>
+            <a href="login.html" aria-label="Account">♙</a>
+            <a href="wishlist.html" aria-label="Wishlist">♡</a>
+            <a href="cart.html" class="bag-icon" aria-label="Shopping bag">
+                ♧ <span id="headerCartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- SEARCH -->
+    <div class="search-panel" id="searchPanel">
+        <input type="search" id="searchInput"
+               placeholder="Search products, collections...">
+        <button id="closeSearch">✕</button>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="index.html">HOME</a>
+        <span>/</span>
+        <span>COLLECTION</span>
+    </div>
+
+    <!-- COLLECTION HERO -->
+    <section class="collection-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span>RIVA VALENCIA ATELIER</span>
+            <h1>THE ART OF<br>EVERYDAY LUXURY.</h1>
+            <p>Discover pieces designed to become part of your story.</p>
+        </div>
+    </section>
+
+    <!-- COLLECTION INTRO -->
+    <section class="collection-intro">
+        <div>
+            <span class="eyebrow">CURATED FOR YOU</span>
+            <h2>THE COLLECTION</h2>
+            <p>Timeless essentials. Exceptional craftsmanship.</p>
+        </div>
+        <div class="collection-count">
+            <span id="productCount">8</span> PRODUCTS
+        </div>
+    </section>
+
+    <!-- CATEGORY NAVIGATION -->
+    <nav class="category-nav">
+        <button class="category-link active" data-category="all">ALL PRODUCTS</button>
+        <button class="category-link" data-category="women">WOMEN</button>
+        <button class="category-link" data-category="men">MEN</button>
+        <button class="category-link" data-category="bags">BAGS</button>
+        <button class="category-link" data-category="accessories">ACCESSORIES</button>
+    </nav>
+
+    <!-- SHOP LAYOUT -->
+    <main class="shop-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="filter-sidebar" id="filterSidebar">
+
+            <div class="filter-heading">
+                <h3>FILTERS</h3>
+                <button id="clearFilters">CLEAR ALL</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>CATEGORIES</h4>
+
+                <label><input type="checkbox" class="category-filter" value="women"> Women</label>
+                <label><input type="checkbox" class="category-filter" value="men"> Men</label>
+                <label><input type="checkbox" class="category-filter" value="bags"> Bags</label>
+                <label><input type="checkbox" class="category-filter" value="accessories"> Accessories</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>PRICE RANGE</h4>
+
+                <div class="price-inputs">
+                    <input type="number" id="minPrice" placeholder="Min €" min="0">
+                    <span>—</span>
+                    <input type="number" id="maxPrice" placeholder="Max €" min="0">
+                </div>
+
+                <button id="applyPrice" class="apply-filter">APPLY PRICE</button>
+            </div>
+
+            <div class="filter-group">
+                <h4>AVAILABILITY</h4>
+                <label><input type="checkbox" id="stockFilter"> In stock only</label>
+            </div>
+
+            <div class="sidebar-note">
+                <span>RIVA VALENCIA ATELIER</span>
+                <p>Thoughtful design. Made to last.</p>
+            </div>
+
+        </aside>
+
+        <!-- PRODUCTS -->
+        <section class="products-section">
+
+            <div class="shop-toolbar">
+                <button id="mobileFilterButton">☰ FILTERS</button>
+
+                <span id="resultText">Showing 8 products</span>
+
+                <select id="sortSelect">
+                    <option value="featured">Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+
+            <div class="no-products" id="noProducts">
+                <h3>NO PRODUCTS FOUND</h3>
+                <p>Try adjusting your filters or search.</p>
+                <button id="resetShop">VIEW ALL PRODUCTS</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <span>JOIN THE ATELIER</span>
+        <h2>A MORE CONSIDERED WAY TO SHOP.</h2>
+        <p>Receive new arrivals, exclusive offers and stories from Valencia.</p>
+
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">SUBSCRIBE →</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <h2>RIVA VALENCIA</h2>
+            <p>Designed in Spain. Carried everywhere.</p>
+        </div>
+
+        <div>
+            <h4>COLLECTIONS</h4>
+            <a href="collection.html">Women</a>
+            <a href="collection.html">Men</a>
+            <a href="collection.html">Accessories</a>
+        </div>
+
+        <div>
+            <h4>HOUSE</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Bespoke</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div>
+            <h4>HELP</h4>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Returns</a>
+            <a href="#">FAQ</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 RIVA VALENCIA. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="shopToast">PRODUCT ADDED TO YOUR BAG ✓</div>
+
+    <script src="collection.js"></script>
+</body>
+</html>

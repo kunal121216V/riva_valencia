@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Bag | Riva Valencia</title>
+  <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT -->
+
+  <div class="announcement-bar">
+    HANDCRAFTED WITH PURPOSE
+    <span>✦</span>
+    COMPLIMENTARY SHIPPING ON ORDERS OVER €250
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="index.html" class="brand">
+      <span class="brand-name">RIVA VALENCIA</span>
+      <span class="brand-subtitle">DISEÑADO EN ESPAÑA</span>
+    </a>
+
+    <nav class="header-actions">
+
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24">
+          <circle cx="10.8" cy="10.8" r="6.8"/>
+          <path d="m16 16 5 5"/>
+        </svg>
+      </button>
+
+      <a href="login.html" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="7.5" r="3.5"/>
+          <path d="M4.5 21c.5-4.3 3.1-6.5 7.5-6.5s7 2.2 7.5 6.5"/>
+        </svg>
+      </a>
+
+      <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+        </svg>
+      </a>
+
+      <a href="cart.html" class="icon-btn cart-header-icon" aria-label="Shopping bag">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 8h14l1 13H4L5 8Z"/>
+          <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+        </svg>
+        <span id="headerCartCount">0</span>
+      </a>
+
+    </nav>
+  </header>
+
+
+  <!-- CART MAIN -->
+
+  <main class="cart-page">
+
+    <div class="cart-heading">
+
+      <span class="cart-item-count" id="cartItemCount">
+        0 ITEMS
+      </span>
+
+      <h1>YOUR BAG</h1>
+
+    </div>
+
+
+    <!-- EMPTY CART -->
+
+    <section class="empty-cart" id="emptyCart">
+
+      <div class="empty-cart-line"></div>
+
+      <h2>YOUR BAG IS EMPTY</h2>
+
+      <p>
+        You don't have anything in your cart yet.
+        Explore the collection and find something you'll love.
+      </p>
+
+      <a href="index.html" class="cart-outline-button">
+        CONTINUE SHOPPING
+      </a>
+
+    </section>
+
+
+    <!-- CART WITH PRODUCTS -->
+
+    <section class="cart-content hidden" id="cartContent">
+
+      <div class="cart-products-section">
+
+        <div class="cart-products-heading">
+          <span>PRODUCT</span>
+          <span>PRICE</span>
+          <span>QUANTITY</span>
+          <span>TOTAL</span>
+        </div>
+
+        <div id="cartProducts"></div>
+
+        <div class="cart-continue">
+          <a href="index.html">← CONTINUE SHOPPING</a>
+        </div>
+
+      </div>
+
+
+      <!-- ORDER SUMMARY -->
+
+      <aside class="cart-summary">
+
+        <span class="eyebrow">YOUR ORDER</span>
+
+        <h2>ORDER SUMMARY</h2>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">€0.00</strong>
+        </div>
+
+        <div class="summary-row">
+          <span>Shipping</span>
+          <strong id="cartShipping">Calculated at checkout</strong>
+        </div>
+
+        <div class="shipping-progress">
+
+          <p id="shippingMessage">
+            Add more items to unlock complimentary shipping.
+          </p>
+
+          <div class="shipping-progress-track">
+            <span id="shippingProgress"></span>
+          </div>
+
+        </div>
+
+        <div class="summary-total">
+          <span>ESTIMATED TOTAL</span>
+          <strong id="cartTotal">€0.00</strong>
+        </div>
+
+        <p class="tax-note">
+          Taxes included where applicable.
+          Shipping calculated at checkout.
+        </p>
+
+        <button class="checkout-button" id="checkoutButton">
+          PROCEED TO CHECKOUT →
+        </button>
+
+        <div class="payment-info">
+          <span>SECURE CHECKOUT</span>
+          <span>VISA</span>
+          <span>MASTERCARD</span>
+          <span>AMEX</span>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <!-- LOWER BRAND SECTION -->
+
+  <section class="cart-brand-section">
+
+    <div>
+      <span class="eyebrow">RIVA VALENCIA ATELIER</span>
+
+      <h2>DESIGNED IN SPAIN. CARRIED EVERYWHERE.</h2>
+
+      <p>
+        Discover refined leather goods, thoughtful gifting
+        and client care shaped around the pace of modern life.
+      </p>
+
+      <a href="index.html" class="cart-dark-button">
+        SHOP THE COLLECTION
+      </a>
+    </div>
+
+    <div class="cart-help-card">
+
+      <span class="eyebrow">CLIENT CARE</span>
+
+      <h3>NEED SIZING, DELIVERY OR RETURNS HELP?</h3>
+
+      <p>
+        Our support pages cover shipping timelines,
+        return steps, fit guidance and common questions.
+      </p>
+
+      <div>
+        <a href="#">Chat Support</a>
+        <a href="#">Visit FAQ</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Return & Exchange Policy</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="cart-footer">
+
+    <div class="cart-footer-links">
+
+      <div>
+        <h4>Join Riva Valencia</h4>
+        <p>
+          Subscribe to receive exclusive offers,
+          new arrivals and stories from our artisans.
+        </p>
+      </div>
+
+      <div>
+        <h5>COLLECTIONS</h5>
+        <a href="collection.html">Women</a>
+        <a href="collection.html">Men</a>
+        <a href="collection.html">Accessories</a>
+        <a href="collection.html">Jackets</a>
+        <a href="#">Sale</a>
+      </div>
+
+      <div>
+        <h5>HOUSE</h5>
+        <a href="#">Our Story</a>
+        <a href="#">Bespoke</a>
+        <a href="#">Corporate Gifts</a>
+        <a href="#">Limited Edition</a>
+      </div>
+
+      <div>
+        <h5>HELP</h5>
+        <a href="#">Contact Us</a>
+        <a href="#">Chat Support</a>
+        <a href="#">Size Guide</a>
+        <a href="#">FAQ</a>
+      </div>
+
+    </div>
+
+    <div class="cart-footer-wordmark">
+      RIVA VALENCIA
+    </div>
+
+    <div class="cart-footer-bottom">
+      <span>© 2026 RIVA VALENCIA. ALL RIGHTS RESERVED.</span>
+      <span>SPAIN</span>
+      <span>SHIPPING POLICY · PRIVACY POLICY · TERMS</span>
+    </div>
+
+  </footer>
+
+  <script src="cart.js"></script>
+
+</body>
+</html>

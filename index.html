@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riva Valencia — refined leather goods and modern essentials.">
+  <title>Riva Valencia | Designed in Spain</title>
+  <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Announcement -->
+<div class="announcement-bar">
+  HANDCRAFTED WITH PURPOSE
+  <span>✦</span>
+  COMPLIMENTARY SHIPPING ON ORDERS OVER €250
+</div>
+
+<!-- Header -->
+<header class="site-header">
+
+  <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <a href="index.html" class="brand">
+    <span class="brand-name">RIVA VALENCIA</span>
+    <span class="brand-subtitle">DISEÑADO EN ESPAÑA</span>
+  </a>
+
+  <nav class="header-actions">
+
+    <button class="icon-btn" id="searchToggle" aria-label="Search">
+      <svg viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.8"/>
+        <path d="m16 16 5 5"/>
+      </svg>
+    </button>
+
+    <a href="login.html" class="icon-btn" aria-label="Account">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="7.5" r="3.5"/>
+        <path d="M4.5 21c.5-4.3 3.1-6.5 7.5-6.5s7 2.2 7.5 6.5"/>
+      </svg>
+    </a>
+
+    <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+      </svg>
+      <span class="count-bubble" id="wishCount">0</span>
+    </a>
+
+    <a href="cart.html" class="icon-btn" aria-label="Shopping bag">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 8h14l1 13H4L5 8Z"/>
+        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+      </svg>
+      <span class="count-bubble" id="cartCount">0</span>
+    </a>
+
+  </nav>
+</header>
+
+<!-- Search -->
+<div class="search-panel" id="searchPanel">
+  <form class="search-form" id="searchForm">
+    <input type="search" placeholder="Search bags, wallets, accessories...">
+    <button type="submit">SEARCH →</button>
+  </form>
+</div>
+
+<!-- Side Navigation -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="side-menu" id="sideMenu">
+
+  <div class="side-menu-head">
+    <span>EXPLORE RIVA</span>
+    <button class="close-menu" id="closeMenu">×</button>
+  </div>
+
+  <a href="#new-arrivals">New Arrivals <span>↗</span></a>
+  <a href="#collections">Collections <span>↗</span></a>
+  <a href="#bestsellers">Best Sellers <span>↗</span></a>
+  <a href="#craftsmanship">Our Craftsmanship <span>↗</span></a>
+
+  <div class="side-menu-note">
+    DESIGNED IN SPAIN. CARRIED EVERYWHERE.
+  </div>
+</aside>
+
+<main>
+
+<!-- Hero -->
+<section class="hero-section">
+
+  <img
+    class="hero-image"
+    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2200&q=88"
+    alt="Riva Valencia fashion collection">
+
+  <div class="hero-shade"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow eyebrow-light">SPRING / SUMMER 2026</span>
+
+    <h1>THE ART OF<br>EVERYDAY.</h1>
+
+    <p>
+      Considered essentials. Exceptional details.<br>
+      Made to move with you.
+    </p>
+
+    <a href="#collections" class="btn-luxury btn-light-outline">
+      EXPLORE THE COLLECTION <span>↗</span>
+    </a>
+  </div>
+
+  <div class="hero-index">
+    <span>01</span><i></i><span>03</span>
+  </div>
+
+</section>
+
+<!-- Intro -->
+<section class="intro-strip">
+  <span class="gold-line"></span>
+  <p>
+    TIMELESS DESIGN, THOUGHTFUL CRAFTSMANSHIP,
+    AND A QUIETER KIND OF LUXURY.
+  </p>
+</section>
+
+<!-- New Arrivals -->
+<section class="section-block" id="new-arrivals">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">JUST ARRIVED</span>
+      <h2>NEW ARRIVALS</h2>
+    </div>
+
+    <a href="collection.html" class="text-link">
+      DISCOVER ALL →
+    </a>
+  </div>
+
+  <div class="feature-grid">
+
+    <a href="collection.html" class="feature-card feature-large">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85" alt="Travel bag">
+
+      <div class="feature-overlay">
+        <span class="eyebrow eyebrow-light">NEW SEASON / 2026</span>
+        <h3>THE WEEKENDER</h3>
+        <span class="shop-link">SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="collection.html" class="feature-card">
+      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1000&q=85" alt="Leather handbag">
+
+      <div class="feature-overlay">
+        <span class="eyebrow eyebrow-light">THE DAILY EDIT</span>
+        <h3>EVERYDAY BAGS</h3>
+        <span class="shop-link">SHOP NOW →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Best Sellers -->
+<section class="section-block bestsellers" id="bestsellers">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">THE PIECES YOU LOVE</span>
+      <h2>BEST SELLERS</h2>
+      <p class="section-subtitle">
+        Our most loved pieces — built for purpose, designed for life.
+      </p>
+    </div>
+
+    <a href="collection.html" class="text-link">VIEW ALL →</a>
+  </div>
+
+  <div class="row g-3 g-lg-4 product-grid">
+
+    <div class="col-6 col-lg-3">
+      <article class="product-card">
+
+        <a href="product.html" class="product-image">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=85" alt="Valencia Weekender">
+          <span class="product-tag">BEST SELLER</span>
+        </a>
+
+        <button class="wish-button">♡</button>
+
+        <div class="product-info">
+          <a href="product.html" class="product-name">THE VALENCIA WEEKENDER</a>
+          <span class="product-price">€ 385.00</span>
+        </div>
+
+      </article>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <article class="product-card">
+
+        <a href="product.html" class="product-image">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85" alt="Shoulder Bag">
+          <span class="product-tag">NEW IN</span>
+        </a>
+
+        <button class="wish-button">♡</button>
+
+        <div class="product-info">
+          <a href="product.html" class="product-name">THE ATELIER SHOULDER BAG</a>
+          <span class="product-price">€ 295.00</span>
+        </div>
+
+      </article>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <article class="product-card">
+
+        <a href="product.html" class="product-image">
+          <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=85" alt="Leather Wallet">
+          <span class="product-tag">BEST SELLER</span>
+        </a>
+
+        <button class="wish-button">♡</button>
+
+        <div class="product-info">
+          <a href="product.html" class="product-name">THE ESSENTIAL WALLET</a>
+          <span class="product-price">€ 125.00</span>
+        </div>
+
+      </article>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <article class="product-card">
+
+        <a href="product.html" class="product-image">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=85" alt="Forma Tote">
+          <span class="product-tag">LIMITED EDITION</span>
+        </a>
+
+        <button class="wish-button">♡</button>
+
+        <div class="product-info">
+          <a href="product.html" class="product-name">THE FORMA TOTE</a>
+          <span class="product-price">€ 340.00</span>
+        </div>
+
+      </article>
+    </div>
+
+  </div>
+
+  <div class="center-action">
+    <a href="collection.html" class="btn-luxury btn-dark">
+      VIEW ALL BEST SELLERS
+    </a>
+  </div>
+
+</section>
+
+<!-- Craftsmanship -->
+<section class="craft-section">
+
+  <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2200&q=85" alt="Fashion craftsmanship">
+
+  <div class="craft-shade"></div>
+
+  <div class="craft-content">
+    <span class="eyebrow eyebrow-gold">OUR CRAFTSMANSHIP</span>
+
+    <h2>DESIGNED<br>WITH INTENTION.</h2>
+
+    <p>
+      Every line has a purpose. Every detail has a story.<br>
+      Discover the hands and heritage behind Riva Valencia.
+    </p>
+
+    <a href="story.html" class="btn-luxury btn-light-outline">
+      DISCOVER OUR STORY ↗
+    </a>
+  </div>
+
+</section>
+
+<!-- Collections -->
+<section class="section-block collection-section" id="collections">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">FIND YOUR SIGNATURE</span>
+      <h2>THE COLLECTIONS</h2>
+      <p class="section-subtitle">Every category, every occasion.</p>
+    </div>
+  </div>
+
+  <div class="collection-grid">
+
+    <a href="collection.html" class="collection-card collection-tall">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85" alt="Briefcases">
+      <div>
+        <span class="eyebrow eyebrow-light">WORK / TRAVEL</span>
+        <h3>BRIEFCASES</h3>
+        <span>SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="collection.html" class="collection-card">
+      <img src="https://images.unsplash.com/photo-1622560480654-d96214fdc887?auto=format&fit=crop&w=1000&q=85" alt="Backpacks">
+      <div>
+        <span class="eyebrow eyebrow-light">EVERYDAY ESSENTIAL</span>
+        <h3>BACKPACKS</h3>
+        <span>SHOP NOW →</span>
+      </div>
+    </a>
+
+    <a href="collection.html" class="collection-card">
+      <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=1000&q=85" alt="Wallets">
+      <div>
+        <span class="eyebrow eyebrow-light">SMALL LEATHER GOODS</span>
+        <h3>WALLETS</h3>
+        <span>SHOP NOW →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Services -->
+<section class="service-row">
+
+  <div class="service-item">
+    <span class="service-icon">✧</span>
+    <h4>THOUGHTFUL DELIVERY</h4>
+    <p>Carefully packed and delivered to your door.</p>
+  </div>
+
+  <div class="service-item">
+    <span class="service-icon">◇</span>
+    <h4>SECURE CHECKOUT</h4>
+    <p>A considered and secure way to pay.</p>
+  </div>
+
+  <div class="service-item">
+    <span class="service-icon">↺</span>
+    <h4>EASY RETURNS</h4>
+    <p>Simple returns within 30 days.</p>
+  </div>
+
+  <div class="service-item">
+    <span class="service-icon">⌁</span>
+    <h4>HERE TO HELP</h4>
+    <p>Our client care team is ready to assist.</p>
+  </div>
+
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+
+  <span class="eyebrow">EXCLUSIVE ACCESS</span>
+
+  <h2>STAY IN THE KNOW</h2>
+
+  <p>
+    New arrivals, private releases and stories from our atelier.
+  </p>
+
+  <form class="newsletter-form" id="newsletterForm">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">SUBSCRIBE →</button>
+  </form>
+
+  <small id="newsletterMessage">No spam. Unsubscribe anytime.</small>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+
+  <div class="footer-top">
+
+    <div class="footer-brand-block">
+      <span class="eyebrow eyebrow-gold">RIVA VALENCIA ATELIER</span>
+
+      <h3>DESIGNED IN SPAIN.<br>CARRIED EVERYWHERE.</h3>
+
+      <p>
+        Discover refined leather goods, thoughtful gifting and
+        client care shaped around the pace of modern life.
+      </p>
+
+      <a href="story.html" class="text-link">OUR STORY →</a>
+    </div>
+
+    <div class="footer-column">
+      <h5>COLLECTIONS</h5>
+      <a href="collection.html">Women</a>
+      <a href="collection.html">Men</a>
+      <a href="collection.html">Accessories</a>
+      <a href="collection.html">New Arrivals</a>
+    </div>
+
+    <div class="footer-column">
+      <h5>THE HOUSE</h5>
+      <a href="story.html">Our Story</a>
+      <a href="story.html">Craftsmanship</a>
+      <a href="story.html">Bespoke Service</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-column">
+      <h5>CLIENT CARE</h5>
+      <a href="#">Shipping</a>
+      <a href="#">Returns & Exchanges</a>
+      <a href="#">FAQs</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+  </div>
+
+  <div class="footer-wordmark">RIVA VALENCIA</div>
+
+  <div class="footer-bottom">
+    <span>© 2026 RIVA VALENCIA. ALL RIGHTS RESERVED.</span>
+    <span>SPAIN · ENGLISH / EUR</span>
+    <span>INSTAGRAM · PINTEREST</span>
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

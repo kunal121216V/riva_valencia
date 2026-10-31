@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Riva Valencia</title>
+  <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<div class="announcement-bar">
+  NEW SEASON ARRIVALS NOW LIVE
+</div>
+
+<header class="site-header">
+  <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <a href="index.html" class="brand">
+    <span class="brand-name">RIVA VALENCIA</span>
+    <span class="brand-subtitle">DISEÑADO EN ESPAÑA</span>
+  </a>
+
+  <nav class="header-actions">
+    <button class="icon-btn" aria-label="Search" onclick="location.href='index.html'">
+      <svg viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.8"/>
+        <path d="m16 16 5 5"/>
+      </svg>
+    </button>
+
+    <a href="login.html" class="icon-btn" aria-label="Account">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="7.5" r="3.5"/>
+        <path d="M4.5 21c.5-4.3 3.1-6.5 7.5-6.5s7 2.2 7.5 6.5"/>
+      </svg>
+    </a>
+
+    <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+      </svg>
+    </a>
+
+    <a href="cart.html" class="icon-btn" aria-label="Shopping bag">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 8h14l1 13H4L5 8Z"/>
+        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+      </svg>
+    </a>
+  </nav>
+</header>
+
+<!-- LOGIN SECTION -->
+
+<main class="auth-layout">
+
+  <!-- LEFT IMAGE -->
+
+  <section class="auth-visual">
+
+    <img
+      src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=90"
+      alt="Riva Valencia fashion editorial">
+
+    <div class="auth-image-overlay"></div>
+
+    <div class="auth-image-top">
+      <span></span>
+      RIVA VALENCIA ATELIER
+    </div>
+
+    <div class="auth-image-content">
+      <h1>CRAFTED<br>AROUND YOU</h1>
+
+      <p>
+        Sign in for saved addresses, order tracking,
+        a running wishlist and early access to new
+        releases from the atelier.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- RIGHT FORM -->
+
+  <section class="auth-form-section">
+
+    <div class="auth-container">
+
+      <button class="google-button" type="button" id="googleButton">
+        <span class="google-g">G</span>
+        CONTINUE WITH GOOGLE
+      </button>
+
+      <div class="auth-divider">
+        <span></span>
+        OR
+        <span></span>
+      </div>
+
+      <!-- TABS -->
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="signInTab">
+          SIGN IN
+        </button>
+
+        <button class="auth-tab" id="registerTab">
+          CREATE ACCOUNT
+        </button>
+      </div>
+
+      <!-- LOGIN FORM -->
+
+      <div class="auth-form-content" id="loginContent">
+
+        <h2>WELCOME BACK</h2>
+
+        <p class="auth-description">
+          Sign in to access an enhanced shopping experience.
+        </p>
+
+        <form id="loginForm">
+
+          <div class="auth-input">
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="EMAIL*"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="auth-input password-input">
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="PASSWORD*"
+              autocomplete="current-password"
+              required>
+
+            <button type="button" class="password-toggle" data-target="loginPassword" aria-label="Show password">
+              ◉
+            </button>
+          </div>
+
+          <div class="forgot-password">
+            <a href="#" id="forgotLink">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            SIGN IN
+          </button>
+
+          <p class="auth-message" id="loginMessage"></p>
+
+        </form>
+
+        <p class="auth-switch-text">
+          Not a member?
+          <button type="button" id="joinButton">Join us.</button>
+        </p>
+
+      </div>
+
+      <!-- REGISTRATION FORM -->
+
+      <div class="auth-form-content hidden" id="registerContent">
+
+        <h2>CREATE YOUR ACCOUNT</h2>
+
+        <p class="auth-description">
+          Join the Riva Valencia community.
+        </p>
+
+        <form id="registerForm">
+
+          <div class="auth-input">
+            <input
+              type="text"
+              id="fullName"
+              placeholder="FULL NAME*"
+              autocomplete="name"
+              required>
+          </div>
+
+          <div class="auth-input">
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="EMAIL*"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="auth-input password-input">
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="PASSWORD (MIN. 8 CHARACTERS)*"
+              minlength="8"
+              autocomplete="new-password"
+              required>
+
+            <button type="button" class="password-toggle" data-target="registerPassword" aria-label="Show password">
+              ◉
+            </button>
+          </div>
+
+          <label class="terms-check">
+            <input type="checkbox" required>
+            <span>
+              I agree to the Terms & Conditions and Privacy Policy.
+            </span>
+          </label>
+
+          <button type="submit" class="auth-submit">
+            CREATE ACCOUNT
+          </button>
+
+          <p class="auth-message" id="registerMessage"></p>
+
+        </form>
+
+        <p class="auth-switch-text">
+          Already a member?
+          <button type="button" id="backToLogin">Sign in.</button>
+        </p>
+
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+
+      <div class="auth-form-content hidden" id="forgotContent">
+
+        <h2>RESET PASSWORD</h2>
+
+        <p class="auth-description">
+          Enter your email address and we'll help you
+          reset your password.
+        </p>
+
+        <form id="forgotForm">
+
+          <div class="auth-input">
+            <input
+              type="email"
+              id="forgotEmail"
+              placeholder="EMAIL ADDRESS*"
+              required>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            SEND RESET LINK
+          </button>
+
+          <p class="auth-message" id="forgotMessage"></p>
+
+        </form>
+
+        <p class="auth-switch-text">
+          Remember your password?
+          <button type="button" id="returnLogin">Sign in.</button>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- LOWER BRAND SECTION -->
+
+<section class="auth-bottom">
+
+  <div class="auth-bottom-copy">
+    <span class="eyebrow">RIVA VALENCIA ATELIER</span>
+
+    <h2>DESIGNED IN SPAIN. CARRIED EVERYWHERE.</h2>
+
+    <p>
+      Discover refined leather goods, thoughtful gifting
+      and client care shaped around the pace of modern life.
+    </p>
+
+    <a href="index.html" class="btn-luxury btn-dark">
+      SHOP THE COLLECTION
+    </a>
+  </div>
+
+  <div class="auth-help-card">
+    <span class="eyebrow">CLIENT CARE</span>
+
+    <h3>NEED SIZING, DELIVERY OR RETURNS HELP?</h3>
+
+    <p>
+      Our support pages cover shipping timelines,
+      return steps, fit guidance and the most common
+      questions before you buy.
+    </p>
+
+    <div>
+      <a href="#">Chat Support</a>
+      <a href="#">Visit FAQ</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Return & Exchange Policy</a>
+    </div>
+  </div>
+
+</section>
+
+<footer class="auth-footer">
+
+  <div class="auth-footer-links">
+    <div>
+      <h4>Join Riva Valencia</h4>
+      <p>Subscribe to receive exclusive offers and stories from our artisans in Valencia.</p>
+      <a href="index.html">BACK TO HOME →</a>
+    </div>
+
+    <div>
+      <h5>COLLECTIONS</h5>
+      <a href="collection.html">Women</a>
+      <a href="collection.html">Men</a>
+      <a href="collection.html">Accessories</a>
+      <a href="collection.html">Jackets</a>
+    </div>
+
+    <div>
+      <h5>HOUSE</h5>
+      <a href="#">Our Story</a>
+      <a href="#">Bespoke</a>
+      <a href="#">Corporate Gifts</a>
+      <a href="#">Limited Edition</a>
+    </div>
+
+    <div>
+      <h5>HELP</h5>
+      <a href="#">Contact Us</a>
+      <a href="#">Chat Support</a>
+      <a href="#">Size Guide</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+
+  <div class="auth-footer-wordmark">
+    RIVA VALENCIA
+  </div>
+
+  <div class="auth-footer-bottom">
+    <span>© 2026 RIVA VALENCIA. ALL RIGHTS RESERVED.</span>
+    <span>SPAIN</span>
+    <span>SHIPPING POLICY · PRIVACY POLICY · TERMS</span>
+  </div>
+
+</footer>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

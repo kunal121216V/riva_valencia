@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | Riva Valencia</title>
+    <link rel="icon" type="image/png" href="Luxury%20Gold%20RV%20Monogram%20Emblem.png">
+    <link rel="stylesheet" href="wishlist.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="announcement">
+        HANDCRAFTED WITH PURPOSE
+        <span>✦</span>
+        COMPLIMENTARY SHIPPING ON ORDERS OVER €250
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="menu">☰</a>
+
+        <a href="index.html" class="logo">
+            RIVA VALENCIA
+            <small>DISEÑADO EN ESPAÑA</small>
+        </a>
+
+        <div class="header-actions">
+            <a href="collection.html">⌕</a>
+            <a href="login.html">♙</a>
+            <a href="wishlist.html" class="active">♡</a>
+            <a href="cart.html">♧ <span id="cartCount">0</span></a>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">HOME</a> / WISHLIST
+    </div>
+
+    <main class="wishlist-container">
+
+        <div class="wishlist-heading">
+            <div>
+                <span class="eyebrow">YOUR PERSONAL COLLECTION</span>
+                <h1>MY WISHLIST</h1>
+                <p>Pieces you've saved for another day.</p>
+            </div>
+
+            <span id="wishlistCount">0 ITEMS</span>
+        </div>
+
+        <!-- EMPTY WISHLIST -->
+
+        <section class="empty-state" id="emptyState">
+            <div class="empty-heart">♡</div>
+            <h2>YOUR WISHLIST IS EMPTY</h2>
+            <p>Discover something beautiful and save it for later.</p>
+            <a href="collection.html" class="primary-button">
+                EXPLORE THE COLLECTION →
+            </a>
+        </section>
+
+        <!-- WISHLIST PRODUCTS -->
+
+        <section class="wishlist-content" id="wishlistContent">
+
+            <div class="wishlist-toolbar">
+                <span>YOUR SAVED PIECES</span>
+                <button id="clearWishlist">CLEAR WISHLIST</button>
+            </div>
+
+            <div class="wishlist-grid" id="wishlistGrid"></div>
+
+        </section>
+
+    </main>
+
+    <section class="wishlist-banner">
+        <span>RIVA VALENCIA ATELIER</span>
+        <h2>DESIGNED IN SPAIN.<br>CARRIED EVERYWHERE.</h2>
+        <a href="collection.html">DISCOVER MORE →</a>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <h2>RIVA VALENCIA</h2>
+            <p>Designed in Spain. Carried everywhere.</p>
+        </div>
+
+        <div>
+            <h4>COLLECTIONS</h4>
+            <a href="collection.html">Women</a>
+            <a href="collection.html">Men</a>
+            <a href="collection.html">Accessories</a>
+        </div>
+
+        <div>
+            <h4>HELP</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Returns</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 RIVA VALENCIA. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="wishlist.js"></script>
+</body>
+</html>
