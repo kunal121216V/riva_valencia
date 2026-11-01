@@ -61,7 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       input.type = input.type === "password" ? "text" : "password";
 
-      button.textContent = input.type === "password" ? "◉" : "◎";
+      const visible = input.type === "text";
+      button.classList.toggle("is-visible", visible);
+      button.setAttribute(
+        "aria-label",
+        visible ? "Hide password" : "Show password"
+      );
 
     });
 
