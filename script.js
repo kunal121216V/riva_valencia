@@ -106,7 +106,11 @@ document.querySelectorAll(".wish-button").forEach((button, index) => {
   if (wishlist.includes(productName)) {
 
     button.classList.add("active");
-    button.textContent = "♥";
+    button.setAttribute("aria-pressed", "true");
+    button.setAttribute("aria-label", `Remove ${productName} from wishlist`);
+  } else {
+    button.setAttribute("aria-pressed", "false");
+    button.setAttribute("aria-label", `Add ${productName} to wishlist`);
 
   }
 
@@ -119,14 +123,16 @@ document.querySelectorAll(".wish-button").forEach((button, index) => {
       );
 
       button.classList.remove("active");
-      button.textContent = "♡";
+      button.setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-label", `Add ${productName} to wishlist`);
 
     } else {
 
       wishlist.push(productName);
 
       button.classList.add("active");
-      button.textContent = "♥";
+      button.setAttribute("aria-pressed", "true");
+      button.setAttribute("aria-label", `Remove ${productName} from wishlist`);
 
     }
 
