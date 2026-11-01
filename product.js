@@ -226,8 +226,11 @@ function updateWishlistButton() {
   );
 
   wishlistButton.classList.toggle("active", exists);
-
-  wishlistButton.textContent = exists ? "♥" : "♡";
+  wishlistButton.setAttribute("aria-pressed", String(exists));
+  wishlistButton.setAttribute(
+    "aria-label",
+    exists ? "Remove from wishlist" : "Add to wishlist"
+  );
 
 }
 
