@@ -234,6 +234,30 @@
   padding: 10px 14px;
   cursor: pointer;
   font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+}
+
+.password-toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.password-toggle .eye-slash {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.password-toggle.is-visible .eye-slash {
+  opacity: 1;
 }
 
 .forgot-password {
@@ -412,7 +436,7 @@
 .auth-footer-wordmark {
   text-align: center;
   font-family: var(--font-display);
-  font-size: clamp(70px,18vw,220px);
+  font-size: clamp(48px,12vw,160px);
   line-height: .9;
   font-weight: 600;
   letter-spacing: -.04em;
@@ -507,6 +531,35 @@
 
   .auth-footer-wordmark {
     font-size: 15vw;
+  }
+
+  .auth-image-content {
+    left: 6%;
+    right: 6%;
+  }
+
+  .auth-image-content p {
+    font-size: 11px;
+  }
+
+  .auth-footer-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 18px 0;
+  }
+}
+
+@media(max-width:360px) {
+  .auth-tabs {
+    height: auto;
+    min-height: 45px;
+  }
+
+  .auth-tab {
+    padding: 10px 6px;
+    font-size: 8px;
+    letter-spacing: 1px;
   }
 
   .auth-footer-bottom {
