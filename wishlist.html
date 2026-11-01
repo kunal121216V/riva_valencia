@@ -20,7 +20,11 @@
     </div>
 
     <header class="header">
-        <a href="index.html" class="menu">☰</a>
+        <a href="index.html" class="menu" aria-label="Home">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 10.5 9-7.5 9 7.5M5 9v11h14V9M9 20v-6h6v6"/>
+            </svg>
+        </a>
 
         <a href="index.html" class="logo">
             RIVA VALENCIA
@@ -28,10 +32,30 @@
         </a>
 
         <div class="header-actions">
-            <a href="collection.html">⌕</a>
-            <a href="login.html">♙</a>
-            <a href="wishlist.html" class="active">♡</a>
-            <a href="cart.html">♧ <span id="cartCount">0</span></a>
+            <a href="collection.html" aria-label="Search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.8"/>
+                    <path d="m16 16 5 5"/>
+                </svg>
+            </a>
+            <a href="login.html" aria-label="Account">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="7.5" r="3.5"/>
+                    <path d="M4.5 21c.5-4.3 3.1-6.5 7.5-6.5s7 2.2 7.5 6.5"/>
+                </svg>
+            </a>
+            <a href="wishlist.html" class="active" aria-label="Wishlist">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+                </svg>
+            </a>
+            <a href="cart.html" aria-label="Shopping bag">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 8h14l1 13H4L5 8Z"/>
+                    <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+                </svg>
+                <span id="cartCount">0</span>
+            </a>
         </div>
     </header>
 
@@ -54,7 +78,11 @@
         <!-- EMPTY WISHLIST -->
 
         <section class="empty-state" id="emptyState">
-            <div class="empty-heart">♡</div>
+            <div class="empty-heart" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+                </svg>
+            </div>
             <h2>YOUR WISHLIST IS EMPTY</h2>
             <p>Discover something beautiful and save it for later.</p>
             <a href="collection.html" class="primary-button">
