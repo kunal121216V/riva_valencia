@@ -55,7 +55,7 @@
 
       <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
         <svg viewBox="0 0 24 24">
-          <path d="M20.8 8.7c0 5.1-8.8 11-8.8-11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+          <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
         </svg>
       </a>
 
@@ -122,7 +122,9 @@
         <span class="product-image-label">RIVA VALENCIA ATELIER</span>
 
         <button class="image-zoom" id="zoomButton" aria-label="View image larger">
-          ⤢
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/>
+          </svg>
         </button>
 
       </div>
@@ -137,7 +139,11 @@
       <span class="product-category">RIVA VALENCIA COLLECTION</span>
 
       <div class="product-rating">
-        <span>★★★★★</span>
+        <span class="rating-stars" role="img" aria-label="Rated 5 out of 5">
+          <svg viewBox="0 0 100 20" aria-hidden="true">
+            <path d="m10 1 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L10 15.3l-5.6 2.9 1.1-6.2L1 7.6l6.2-.9L10 1Zm20 0 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L20 7.6l6.2-.9L30 1Zm20 0 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L40 7.6l6.2-.9L50 1Zm20 0 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L60 7.6l6.2-.9L70 1Zm20 0 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L80 7.6l6.2-.9L90 1Z"/>
+          </svg>
+        </span>
         <small>NEW SEASON ARRIVAL</small>
       </div>
 
@@ -245,7 +251,9 @@
           </button>
 
           <button class="product-wishlist" id="wishlistButton" aria-label="Add to wishlist">
-            ♡
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+              </svg>
           </button>
 
         </div>
@@ -262,7 +270,9 @@
       <div class="product-delivery">
 
         <div>
-          <span>✧</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 7h11v11H3zM14 10h4l3 3v5h-7zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+          </span>
           <div>
             <strong>COMPLIMENTARY SHIPPING</strong>
             <p>On all orders above €250.</p>
@@ -270,7 +280,9 @@
         </div>
 
         <div>
-          <span>↺</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 11a8 8 0 0 1 14-5l2 2M20 3v5h-5M20 13a8 8 0 0 1-14 5l-2-2M4 21v-5h5"/></svg>
+          </span>
           <div>
             <strong>EASY RETURNS</strong>
             <p>Simple returns within our return window.</p>
@@ -278,7 +290,9 @@
         </div>
 
         <div>
-          <span>♧</span>
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 4 7l8 4 8-4-8-4ZM4 7v10l8 4 8-4V7M12 11v10"/></svg>
+          </span>
           <div>
             <strong>CRAFTED WITH PURPOSE</strong>
             <p>Thoughtful design, made to last.</p>
@@ -377,7 +391,9 @@
   <!-- IMAGE LIGHTBOX -->
 
   <div class="product-lightbox" id="productLightbox">
-    <button id="closeLightbox" aria-label="Close image">×</button>
+    <button id="closeLightbox" aria-label="Close image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
     <img id="lightboxImage" src="" alt="Product enlarged view">
   </div>
 
