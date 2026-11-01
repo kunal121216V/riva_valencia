@@ -149,6 +149,38 @@ document.querySelectorAll(".wish-button").forEach((button, index) => {
 
 updateWishlistCount();
 
+// CART
+
+function updateCartCount() {
+  const count = document.getElementById("headerCartCount");
+
+  if (!count) return;
+
+  let cart = [];
+
+  try {
+    const storedCart = JSON.parse(localStorage.getItem("rivaCart") || "[]");
+    cart = Array.isArray(storedCart) ? storedCart : [];
+  } catch {
+    cart = [];
+  }
+
+  const total = cart.reduce(
+    (sum, item) => sum + (Number(item.quantity) || 0),
+    0
+  );
+
+  count.textContent = total;
+  count.classList.toggle("visible", total > 0);
+}
+
+updateCartCount();
+window.addEventListener("storage", event => {
+  if (event.key === "rivaCart") {
+    updateCartCount();
+  }
+});
+
 
 // NEWSLETTER
 
