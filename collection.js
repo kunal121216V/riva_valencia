@@ -379,8 +379,11 @@ function renderProducts() {
                     class="wishlist-button ${isWishlisted(product.id) ? "active" : ""}"
                     data-wishlist="${product.id}"
                     aria-label="Toggle wishlist"
+                    aria-pressed="${isWishlisted(product.id)}"
                 >
-                    ${isWishlisted(product.id) ? "♥" : "♡"}
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.8 8.7c0 5.1-8.8 11-8.8 11s-8.8-5.9-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/>
+                    </svg>
                 </button>
 
                 <button
