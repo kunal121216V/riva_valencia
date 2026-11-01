@@ -14,10 +14,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 82px;
+}
+
 body {
     background: var(--cream);
     color: var(--dark);
     font-family: 'Jost', sans-serif;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
 }
 
 button, input, select {
@@ -26,6 +36,14 @@ button, input, select {
 
 button, a {
     -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
 }
 
 a {
@@ -38,7 +56,7 @@ button {
 }
 
 .announcement {
-    height: 34px;
+    min-height: 34px;
     background: var(--dark);
     color: white;
     display: flex;
@@ -90,7 +108,21 @@ button {
 .menu-toggle {
     border: none;
     background: transparent;
-    font-size: 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--dark);
+}
+
+.menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
 }
 
 .header-actions {
@@ -98,21 +130,50 @@ button {
     display: flex;
     gap: 23px;
     align-items: center;
-    font-size: 22px;
+    font-size: 16px;
 }
 
-.header-actions button {
+.header-actions > a,
+.header-actions > button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 42px;
+    color: var(--dark);
     border: none;
     background: none;
-    font-size: 28px;
+    padding: 5px;
+}
+
+.header-actions svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .bag-icon {
-    font-size: 20px;
+    text-decoration: none;
 }
 
 .bag-icon span {
-    font-size: 11px;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #fff;
+    font-size: 8px;
+    line-height: 1;
 }
 
 .search-panel {
@@ -139,9 +200,22 @@ button {
 }
 
 .search-panel button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background: none;
-    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.search-panel button svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
 }
 
 .breadcrumb {
@@ -398,6 +472,18 @@ button {
     background: transparent;
     font-size: 10px;
     letter-spacing: 1px;
+    align-items: center;
+    gap: 8px;
+}
+
+#mobileFilterButton svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .product-grid {
@@ -453,7 +539,21 @@ button {
 }
 
 .wishlist-button.active {
-    color: #a33b35;
+    color: #9c554d;
+}
+
+.wishlist-button svg {
+    width: 19px;
+    height: 19px;
+    fill: transparent;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.wishlist-button.active svg {
+    fill: currentColor;
 }
 
 .quick-add {
@@ -652,20 +752,32 @@ button {
 
 /* MOBILE */
 
-@media (max-width: 650px) {
+@media (max-width: 660px) {
 
     .announcement {
         font-size: 7px;
         gap: 7px;
         letter-spacing: 1px;
+        padding: 0 10px;
+        text-align: center;
     }
 
     .header {
         height: 70px;
         padding: 0 18px;
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+    }
+
+    .search-panel {
+        top: 70px;
     }
 
     .logo {
+        position: static;
+        left: auto;
+        transform: none;
+        justify-self: center;
         font-size: 25px;
     }
 
@@ -675,12 +787,19 @@ button {
     }
 
     .header-actions {
-        gap: 12px;
-        font-size: 18px;
+        gap: 3px;
+        margin-left: 0;
     }
 
-    .header-actions button {
-        font-size: 23px;
+    .header-actions > a,
+    .header-actions > button {
+        width: 33px;
+        height: 40px;
+    }
+
+    .header-actions svg {
+        width: 19px;
+        height: 19px;
     }
 
     .breadcrumb {
@@ -698,6 +817,7 @@ button {
 
     .collection-intro {
         padding: 45px 20px 25px;
+        gap: 15px;
     }
 
     .collection-intro h2 {
@@ -727,7 +847,7 @@ button {
     }
 
     #mobileFilterButton {
-        display: block;
+        display: inline-flex;
     }
 
     .filter-sidebar {
@@ -761,11 +881,12 @@ button {
     }
 
     .product-image {
-        height: 230px;
+        height: auto;
+        aspect-ratio: 4 / 5;
     }
 
     .product-info h3 {
-        font-size: 18px;
+        font-size: clamp(15px, 4vw, 18px);
     }
 
     .product-info {
@@ -815,16 +936,112 @@ button {
     }
 }
 
-@media (max-width: 370px) {
-    .product-image {
-        height: 190px;
+@media (max-width: 420px) {
+    .header {
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
+    .logo {
+        font-size: 21px;
+        white-space: nowrap;
+    }
+
+    .logo small {
+        font-size: 6px;
+        letter-spacing: 1.5px;
+    }
+
+    .header-actions {
+        gap: 0;
+        margin-left: 0;
+    }
+
+    .collection-intro {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .collection-count {
+        align-self: flex-end;
+    }
+
+    .shop-layout {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .shop-toolbar {
+        gap: 8px;
+    }
+
+    .shop-toolbar span {
+        flex: 1 1 100%;
+        order: 3;
+    }
+
+    .shop-toolbar select {
+        flex: 1;
+        max-width: none;
+    }
+
+    .newsletter form {
+        flex-wrap: wrap;
+        border-bottom: 0;
+    }
+
+    .newsletter input {
+        flex-basis: 100%;
+        border-bottom: 1px solid var(--dark);
+    }
+
+    .newsletter button {
+        min-height: 44px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 370px) {
     .product-grid {
         gap: 25px 9px;
     }
 
     .header-actions {
-        gap: 8px;
+        gap: 0;
+    }
+
+    .header-actions > a,
+    .header-actions > button {
+        width: 29px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo small {
+        letter-spacing: 1.5px;
+    }
+
+    .announcement {
+        font-size: 6px;
+        gap: 5px;
+        letter-spacing: .7px;
+    }
+
+    .header {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
     }
 }
